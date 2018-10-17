@@ -3,8 +3,8 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Isaac Harper.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -38,6 +38,13 @@ def run_test_triangle_right_justified():
 
 
 def triangle_right_justified(r):
+    for j in range(r):
+        for k in range(r - (j + 1)):
+            print(' ', end=' ')
+        for a in range(j + 1):
+            print(a + 1, end=' ')
+        print()
+
     """
     Prints a triangle of numbers, with r rows.
     It looks the same as a previous example, but right-justified.
@@ -55,7 +62,7 @@ def triangle_right_justified(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -96,6 +103,12 @@ def run_test_triangle_upside_down():
 
 
 def triangle_upside_down(r):
+    for j in range(r):
+        for k in range(j):
+            print(' ', end=' ')
+        for a in range(r - j):
+            print(a + 1, end=' ')
+        print()
     """
     Prints a triangle of numbers, with r rows.
     It looks the same as the previous problem,
@@ -109,7 +122,7 @@ def triangle_upside_down(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -140,6 +153,16 @@ def run_test_vee():
 
 
 def vee(r):
+    for j in range(r):
+        for a in range(j):
+            print(' ', end=' ')
+        for b in range(r - j):
+            print(b + 1, end=' ')
+        for c in range(1):
+            print('-', end=' ')
+        for d in range(r - j):
+            print(-j - d + r, end=' ')
+        print()
     """
     Prints a "V" of numbers, with r rows.
     It looks like this example, when r = 5:
@@ -160,7 +183,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
